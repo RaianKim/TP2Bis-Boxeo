@@ -31,15 +31,10 @@ public static class Funciones
         }
         return entero;
     }
-
-    public static DateTime IngresarFecha(string msj)
-    {
-        DateTime fechaDate;
-        string fechaCadena = IngresarTexto(msj);
-        while (!DateTime.TryParse(fechaCadena, out fechaDate))
-        {
-            fechaCadena = IngresarTexto("ERROR! " + msj);
-        }
-        return fechaDate;
+    public static int numeroAleatorio(int min, int max){
+        Random rnd = new Random();
+        int numeroAleatorio = rnd.Next(min, max);
+        return numeroAleatorio;
     }
+
 }
