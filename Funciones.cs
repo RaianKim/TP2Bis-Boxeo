@@ -1,3 +1,4 @@
+using System;
 public static class Funciones
 {
     public static string IngresarTexto(string msj)
@@ -35,6 +36,21 @@ public static class Funciones
         Random rnd = new Random();
         int numeroAleatorio = rnd.Next(min, max);
         return numeroAleatorio;
+    }
+
+    public static string ganador(double BoxGanador,string NombreBoxGanador)
+    {
+        string CompGanador = "";
+        if(BoxGanador >= 30){
+            CompGanador = $"Gano {NombreBoxGanador} por KO";
+        }
+        else if(BoxGanador >= 10 && BoxGanador < 30){
+            CompGanador = $"Gano {NombreBoxGanador} por puntos en fallo unanime";
+        }
+        else if(BoxGanador < 10){
+            CompGanador = $"Gano {NombreBoxGanador} por puntos en fallo dividido";
+        }
+        return CompGanador;
     }
 
 }
