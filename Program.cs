@@ -96,16 +96,9 @@ void Pelea(){
     double boxer1,boxer2;
     boxer1 = listBoxeador[Box1].ObtenerSkill();
     boxer2 = listBoxeador[Box2].ObtenerSkill();
-    if(boxer1 > boxer2){
-        mayorNum = boxer1;
-        mayorNomb = listBoxeador[Box1].Nombre;
-    }
-    else{
-        mayorNum = boxer2;
-        mayorNomb = listBoxeador[Box2].Nombre;
-    }
-
-    Console.WriteLine(Funciones.ganador(mayorNum,mayorNomb));
+    mayorNum = Funciones.MayorNumero(boxer1,boxer2);
+    mayorNomb = Funciones.MayorNumNombre(boxer1,boxer2,Box1,Box2);
+    Console.WriteLine(Funciones.ganadorBoxeo(mayorNum,mayorNomb));
     Thread.Sleep(4000);
     
 }

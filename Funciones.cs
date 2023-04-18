@@ -38,7 +38,7 @@ public static class Funciones
         return numeroAleatorio;
     }
 
-    public static string ganador(double BoxGanador,string NombreBoxGanador)
+    public static string ganadorBoxeo(double BoxGanador,string NombreBoxGanador)
     {
         string CompGanador = "";
         if(BoxGanador >= 30){
@@ -53,4 +53,32 @@ public static class Funciones
         return CompGanador;
     }
 
+    public static double MayorNumero(double Boxeadorn1, double Boxeadorn2)
+    {
+        double aux;
+        if(Boxeadorn1 > Boxeadorn2)
+        {
+            aux = Boxeadorn1;
+        }
+        else
+        {
+            aux = Boxeadorn2;
+        }
+        return aux;
+
+    }
+    public static string MayorNumNombre(double Boxeadorn1, double Boxeadorn2,string Box1Nombre, string Box2Nombre)
+    {
+        string aux;
+        if(Boxeadorn1 > Boxeadorn2)
+        {
+            aux = Box1Nombre;
+        }
+        else
+        {
+            aux = Box2Nombre;
+        }
+        return aux;
+
+    }
 }
